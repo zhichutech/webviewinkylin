@@ -1,0 +1,42 @@
+{
+  "name": "your-app-name",
+  "version": "1.0.1",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "builder": "electron-builder -l deb --x64",
+    "electron:generate-icons": "electron-icon-builder --input=./public/icon.png --output=release --flatten"
+  },
+  "repository": "https://github.com/zhichutech/webviewinkylin.git",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": {
+    "name": "yourname",
+    "email": "youremail@gmail.com"
+  },
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "20.0.3",
+    "electron-builder": "^25.1.8",
+    "electron-icon-builder": "^2.0.1"
+  },
+  "build": {
+    "productName": "your-app-name",
+    "asar": "false",
+    "appId": "your-app-id",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "icon": "./release/icons",
+      "category": "Education",
+      "target": "deb"
+    }
+  }
+}
